@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React from 'react'
 import { signIn, signOut, useSession } from 'next-auth/react'
 
 const Login = () => {
@@ -12,9 +12,9 @@ const Login = () => {
     if (session.status === "authenticated") {
         return (
             <>
-            <h1>Welcome to {session.data?.user?.email}</h1>
-            <h1>Welcome to {session.data?.user?.name}</h1>
-            <h1>Welcome to {session.status}</h1>
+                <h1>Welcome to {session.data?.user?.email}</h1>
+                <h1>Welcome to {session.data?.user?.name}</h1>
+                <h1>Welcome to {session.status}</h1>
 
 
                 <button onClick={() => signOut()}>LogOut</button>

@@ -11,7 +11,12 @@ const Login = () => {
     }
     if (session.status === "authenticated") {
         return (
-            <>Welcome to {session.data?.user?.email}
+            <>
+            <h1>Welcome to {session.data?.user?.email}</h1>
+            <h1>Welcome to {session.data?.user?.name}</h1>
+            <h1>Welcome to {session.status}</h1>
+
+
                 <button onClick={() => signOut()}>LogOut</button>
 
                 {/* <button onClick={() => signOut("google")}>LogOut</button> */}
